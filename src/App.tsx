@@ -23,7 +23,7 @@ export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   useEffect(()=>{
-    axios.get("https://jsonplaceholder.typicode.com/post980898s")
+    axios.get("https://jsonplaceholder.typicode.com/posts")
     .then(res=> dispatch({type: "SUCCESS", payload: res.data}))
     .catch(err=> dispatch({type: "ERROR"}))
   }, [])
